@@ -14,17 +14,17 @@ std::vector<int> create_array(int n){
     return arr;
 }
 
-void print_array(std::vector<int> arr){
+void print_array(std::vector<int>& arr){
     std::cout<<"Array:"<<std::flush;
-    for(auto i: arr){
+    for(auto& i: arr){
         std::cout<<i<<" "<<std::flush;
     }
     std::cout<<std::endl;
 }
 
-std::vector<int> sort_array(std::vector<int> arr){
+std::vector<int> sort_array(std::vector<int>& arr){
     std::sort(arr.begin(), arr.end());
-    std::cout<<"Array Sorted!"<<std::flush<<std::endl;
+    std::cout<<"Array Sorted!\n"<<std::flush;
     print_array(arr);
     return arr;
 }
